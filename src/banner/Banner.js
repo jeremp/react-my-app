@@ -5,6 +5,7 @@ class Banner extends React.Component {
     constructor(props){
         super(props);
         this.state = {welldone: false};
+        this.mybanner = React.createRef();
     }
 
     render() {
@@ -13,6 +14,18 @@ class Banner extends React.Component {
         }else{
             return <h1>Well Done !</h1>
         }
+    }
+
+    allWorkCompleted(){
+        this.setState({
+            welldone: true
+        });
+    }
+
+    notCompleted(){
+        this.setState({
+            welldone: false
+        });
     }
 
 }
