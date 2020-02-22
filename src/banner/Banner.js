@@ -5,7 +5,7 @@ class Banner extends React.Component {
     constructor(props){
         super(props);
         this.state = {welldone: false};
-        this.mybanner = React.createRef();
+        
     }
 
     render() {

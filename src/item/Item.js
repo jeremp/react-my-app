@@ -1,4 +1,5 @@
 import React from 'react';
+import Checkbox from '@material-ui/core/Checkbox';
 
 class Item extends React.Component {
 
@@ -16,7 +17,7 @@ class Item extends React.Component {
     render() {
         return (
           <div className="item">
-            <input type="checkbox" id={this.props.number} checked={this.state.done} onChange={(e) => this.handleChange(e)}/>
+            <Checkbox id={this.props.number} checked={this.state.done} onChange={(e) => this.handleChange(e)}/>
             <label htmlFor={this.props.number}>
                 {this.props.name}
             </label>
