@@ -5,19 +5,24 @@ import AddCircle from '@material-ui/icons/AddCircle';
 
 class AddItemForm extends React.Component {
 
-    constructor(props){
+    constructor(props) {
         super(props)
     }
 
-    render(){
+    keyPress(e) {
+        if(e.keyCode === 13){
+            this.props.addTask(e.target.value);
+            e.target.value = "";
+         }
+    }
 
+    render() {
         return <div>
-            
-            <TextField />
+            <TextField label="add nother task..." onKeyDown={this.keyPress.bind(this)}/>
             <IconButton color="secondary" aria-label="add an alarm">
-  <AddCircle />
-</IconButton>
-            </div>
+                <AddCircle />
+            </IconButton>
+        </div>
     }
 
 }
