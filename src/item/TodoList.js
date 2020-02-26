@@ -1,4 +1,5 @@
 import React from 'react';
+import Divider from '@material-ui/core/Divider';
 import Item from './Item'
 import Banner from '../banner/Banner';
 import AddItemForm from '../form/AddItemForm'
@@ -46,6 +47,7 @@ class TodoList extends React.Component {
             <div className="todo">
                 <Banner ref={this.mybanner} />
                 {listItems}
+                <Divider variant="middle" style={{marginTop: "1em", marginBottom: "1em"}}/>
                 <AddItemForm addTask={this.addTask.bind(this)}/>
             </div>
         );

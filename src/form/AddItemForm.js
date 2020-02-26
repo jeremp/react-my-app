@@ -1,7 +1,8 @@
 import React from 'react';
+import Button from '@material-ui/core/Button'
 import TextField from '@material-ui/core/TextField';
-import IconButton from '@material-ui/core/IconButton';
-import AddCircle from '@material-ui/icons/AddCircle';
+import Box from '@material-ui/core/Box';
+
 
 class AddItemForm extends React.Component {
 
@@ -29,12 +30,10 @@ class AddItemForm extends React.Component {
     }
 
     render() {
-        return <div>
-            <TextField ref={this.myTxtField} label="add nother task..." onKeyDown={this.keyPress.bind(this)} />
-            <IconButton color="secondary" aria-label="add an alarm" onClick={this.formSubmitted.bind(this)}>
-                <AddCircle />
-            </IconButton>
-        </div>
+        return <Box style={{ display: 'flex'}}>
+            <TextField ref={this.myTxtField} label="add nother task..." onKeyDown={this.keyPress.bind(this)} variant="outlined"/>
+            <Button  color="secondary" onClick={this.formSubmitted.bind(this)}>Add</Button>
+        </Box>
     }
 
 }
